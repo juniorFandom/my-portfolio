@@ -12,13 +12,13 @@
         <nav>
             <ol>
                 <li>
-                    <a href="#">acceuil</a>
+                    <a href="#acceuil">acceuil</a>
                 </li>
                 <li>
-                    <a href="#">Mes projets</a>
+                    <a href="#projects">Mes projets</a>
                 </li>
                 <li>
-                    <a href="#">A propos</a>
+                    <a href="#">Mes competences</a>
                 </li>
                 <li>
                     <a href="#">Me contacter</a>
@@ -28,80 +28,110 @@
             <button class="btn" onclick="show()">Menu</button>
         </nav>
     </header>
-    <main>
-        <div class="accueil">
+    <div class="main">
+
+        <main id="acceuil">
+            <div class="accueil">
             <img src="image/cp2.png" alt="image1">
             <div class="description"> 
                 <h3>Bonjour, je suis Fandom chefang junior <br>Developpeur backend python (django) passionner par le devellopement resident a yaounde plus precisement a messassi</h3>
             </div>
-        </div>
+            </div>
         
-    </main>
-
-    <section class="projets">
-        <h3>Mes projets</h3>
-        <div class="grid">
-            <div class="project-grid">
-                <img class="image-project" src="image/cp2.png" alt="image1">
-                <div class="description">
-                    prjet de gestion de stock cas de franco
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium natus doloremque quo nemo quisquam voluptatem corporis odio aperiam unde maiores doloribus dolor, quos necessitatibus in, magni sed cupiditate minima quis.
+        </main>
+        
+        <section id="projects" class="projets">
+            <h3>Mes projets</h3>
+            <div class="grid">
+                <div class="project-grid">
+                    <img class="image-project" src="image/cp2.png" alt="image1">
+                    <div class="description">
+                        prjet de gestion de stock cas de franco
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium natus doloremque quo nemo quisquam voluptatem corporis odio aperiam unde maiores doloribus dolor, quos necessitatibus in, magni sed cupiditate minima quis.
+                    </div>
+                    <div class="bnt-grid">
+                        <button>detail</button>
+                        <button>lien</button>
+                    </div>
                 </div>
-                <div class="bnt-grid">
-                    <button>detail</button>
-                    <button>lien</button>
+                <div class="project-grid">
+                    <img class="image-project" src="image/cp2.png" alt="image1">
+                    <div class="description">
+                        prjet de gestion de stocjuiuinuxiuweinioeywk cas de franco
+                    </div>
+                    <div class="bnt-grid">
+                        <button>detail</button>
+                        <button>lien</button>
+                    </div>
                 </div>
+                <div class="project-grid">
+                    <img class="image-project" src="image/cp2.png" alt="image1">
+                    <div class="description">
+                        prjet de gestion de stock cas de franco
+                    </div>
+                    <div class="bnt-grid">
+                        <button>detail</button>
+                        <button>lien</button>
+                    </div>
+                </div>
+                <div class="project-grid">
+                    <img class="image-project" src="image/cp2.png" alt="image1">
+                    <div class="description">
+                        prjet de gestion de stock cas de franco
+                    </div>
+                    <div class="bnt-grid">
+                        <button>detail</button>
+                        <button>lien</button>
+                    </div>
+                </div>
+                <div class="project-grid">
+                    <img class="image-project" src="image/cp2.png" alt="image1">
+                    <div class="description">
+                        prjet de gestion de stock cas de franco
+                    </div>
+                    <div class="bnt-grid">
+                        <button>detail</button>
+                        <button>lien</button>
+                    </div>
+                </div>
+                
             </div>
-            <div class="project-grid">
-                <img class="image-project" src="image/cp2.png" alt="image1">
-                <div class="description">
-                    prjet de gestion de stocjuiuinuxiuweinioeywk cas de franco
-                </div>
-                <div class="bnt-grid">
-                    <button>detail</button>
-                    <button>lien</button>
-                </div>
-            </div>
-            <div class="project-grid">
-                <img class="image-project" src="image/cp2.png" alt="image1">
-                <div class="description">
-                    prjet de gestion de stock cas de franco
-                </div>
-                <div class="bnt-grid">
-                    <button>detail</button>
-                    <button>lien</button>
-                </div>
-            </div>
-            <div class="project-grid">
-                <img class="image-project" src="image/cp2.png" alt="image1">
-                <div class="description">
-                    prjet de gestion de stock cas de franco
-                </div>
-                <div class="bnt-grid">
-                    <button>detail</button>
-                    <button>lien</button>
-                </div>
-            </div>
-            <div class="project-grid">
-                <img class="image-project" src="image/cp2.png" alt="image1">
-                <div class="description">
-                    prjet de gestion de stock cas de franco
-                </div>
-                <div class="bnt-grid">
-                    <button>detail</button>
-                    <button>lien</button>
-                </div>
-            </div>
+        
+        </section>
 
-        </div>
-      
-    </section>
+        <section id="skills">
+            <h3>Mes competences</h3>
+            <div class="skills">
+                <div class="btn-skill">javaScript</div>
+                <div class="btn-skill">css</div>
+                <div class="btn-skill">python</div>
+                <div class="btn-skill">html</div>
+                <div class="btn-skill">php</div>
+                <div class="btn-skill">django</div>
+                <div class="btn-skill">Postgrey</div>
+                <div class="btn-skill">C</div>
+            </div>
+        </section>
 
-    <form id="form-add" action="">
-        <input type="text" placeholder="entrer un nombre">
-    </form>
+        <section class="contact">
+            <h3>Me contacter</h3>
+            <form action="" class="form">
+                <label for="nom">Nom:</label>
+                <input type="text" placeholder="votre nom">
+                <label for="Email">Email:</label>
+                <input type="email" placeholder="votre addresse mail">
+                <div class="btn-form">
+                    <button type="submit">envoyer</button>
+                    <button type="reset">effacer</button>
+                </div>
+            </form>
 
-
+        </section>
+        
+</div>
+    <footer>
+        tout droit reserver 2026
+    </footer>
     <script>
         function show(){
             form = document.querySelector('#form-add');
