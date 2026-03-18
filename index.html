@@ -1,146 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Fandom CHEFANG Junior - Développeur Backend Python/Django">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Fandom CHEFANG Junior | Portfolio Développeur Backend Python/Django</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header>
         <h3>FANDOM junior</h3>
         <nav>
-            <ol>
-                <li>
-                    <a href="#acceuil">acceuil</a>
-                </li>
-                <li>
-                    <a href="#projects">Mes projets</a>
-                </li>
-                <li>
-                    <a href="#">Mes competences</a>
-                </li>
-                <li>
-                    <a href="#">Me contacter</a>
-                </li>
-
+            <ol id="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projects">Mes projets</a></li>
+                <li><a href="#skills">Mes compétences</a></li>
+                <li><a href="#contact">Me contacter</a></li>
             </ol>
-            <button class="btn" onclick="show()">Menu</button>
+            <button class="btn menu-btn" onclick="toggleMenu()">☰ Menu</button>
         </nav>
     </header>
+
     <div class="main">
-
-        <main id="acceuil">
+        <!-- Section Accueil -->
+        <section id="accueil">
             <div class="accueil">
-            <img src="image/cp2.png" alt="image1">
-            <div class="description"> 
-                <h3>Bonjour, je suis Fandom chefang junior <br>Developpeur backend python (django) passionner par le devellopement resident a yaounde plus precisement a messassi</h3>
+                <img src="image/tof.png" alt="Photo de Fandom CHEFANG Junior, développeur backend Python"
+                    class="profile-img">
+                <div class="description">
+                    <h1>Bonjour, je suis <span class="highlight">Fandom CHEFANG Junior</span></h1>
+                    <p class="subtitle">Développeur Backend Python (Django) passionné, basé à Yaoundé.</p>
+                    <p class="description-text">Je transforme vos idées en applications web robustes, sécurisées et
+                        évolutives. Avec une solide formation en développement et une passion pour la résolution de
+                        problèmes complexes, je donne vie à vos projets backend.</p>
+                    <div class="cta-container">
+                        <a href="#contact" class="cta-button">Travaillons ensemble →</a>
+                        <a href="#projects" class="cta-button secondary">Voir mes projets</a>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projects">
+            <h2>Mes projets</h2>
+
+            <!-- Filtres de projets -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="python">Python/Django</button>
+                <button class="filter-btn" data-filter="php">PHP</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
             </div>
-        
-        </main>
-        
-        <section id="projects" class="projets">
-            <h3>Mes projets</h3>
-            <div class="grid">
-                <div class="project-grid">
-                    <img class="image-project" src="image/cp2.png" alt="image1">
-                    <div class="description">
-                        prjet de gestion de stock cas de franco
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium natus doloremque quo nemo quisquam voluptatem corporis odio aperiam unde maiores doloribus dolor, quos necessitatibus in, magni sed cupiditate minima quis.
-                    </div>
-                    <div class="bnt-grid">
-                        <button>detail</button>
-                        <button>lien</button>
-                    </div>
-                </div>
-                <div class="project-grid">
-                    <img class="image-project" src="image/cp2.png" alt="image1">
-                    <div class="description">
-                        prjet de gestion de stocjuiuinuxiuweinioeywk cas de franco
-                    </div>
-                    <div class="bnt-grid">
-                        <button>detail</button>
-                        <button>lien</button>
-                    </div>
-                </div>
-                <div class="project-grid">
-                    <img class="image-project" src="image/cp2.png" alt="image1">
-                    <div class="description">
-                        prjet de gestion de stock cas de franco
-                    </div>
-                    <div class="bnt-grid">
-                        <button>detail</button>
-                        <button>lien</button>
-                    </div>
-                </div>
-                <div class="project-grid">
-                    <img class="image-project" src="image/cp2.png" alt="image1">
-                    <div class="description">
-                        prjet de gestion de stock cas de franco
-                    </div>
-                    <div class="bnt-grid">
-                        <button>detail</button>
-                        <button>lien</button>
-                    </div>
-                </div>
-                <div class="project-grid">
-                    <img class="image-project" src="image/cp2.png" alt="image1">
-                    <div class="description">
-                        prjet de gestion de stock cas de franco
-                    </div>
-                    <div class="bnt-grid">
-                        <button>detail</button>
-                        <button>lien</button>
-                    </div>
-                </div>
+
+            <div class="grid" id="projects-grid">
                 
+                <article class="project-card" data-category="python">
+                    <img class="project-image" src="image/cp4.png"
+                        alt="Capture d'écran de l'application de gestion de stock pour l'entreprise Franco">
+                    <div class="project-content">
+                        <h3>Gestion de stock - Franco</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <p class="project-description">
+                            Application complète de gestion de stock pour une entreprise de distribution.
+                            Gestion des entrées/sorties, alertes de stock bas, génération de rapports PDF et dashboard
+                            admin.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
+                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+
+              
+                <article class="project-card" data-category="python">
+                    <img class="project-image" src="image/cp2.png"
+                        alt="Capture d'écran de la documentation de l'API e-commerce">
+                    <div class="project-content">
+                        <h3>API E-commerce RESTful</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django REST</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">Swagger</span>
+                        </div>
+                        <p class="project-description">
+                            API REST complète pour une plateforme e-commerce avec authentification JWT,
+                            panier d'achat, gestion de commandes et documentation interactive avec Swagger.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
+                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projet 3 - Blog CMS -->
+                <article class="project-card" data-category="php">
+                    <img class="project-image" src="image/cp4.png" alt="Capture d'écran du système de blog CMS">
+                    <div class="project-content">
+                        <h3>Système de Blog CMS</h3>
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">HTML/CSS</span>
+                        </div>
+                        <p class="project-description">
+                            CMS de blog fait maison avec système d'authentification,
+                            création d'articles, commentaires modérés et tableau de bord administrateur.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
+                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="project-card" data-category="javascript">
+                    <img class="project-image" src="image/cp3.png"
+                        alt="Capture d'écran de l'application météo">
+                    <div class="project-content">
+                        <h3>Application Météo</h3>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <p class="project-description">
+                            Application météo interactive utilisant une API publique.
+                            Recherche de villes, affichage des prévisions sur 5 jours et design responsive.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
+                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="project-card" data-category="python">
+                    <img class="project-image" src="image/cp2.png"
+                        alt="Capture d'écran du système d'authentification">
+                    <div class="project-content">
+                        <h3>Système d'authentification sécurisé</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">HTMX</span>
+                        </div>
+                        <p class="project-description">
+                            Système complet d'authentification avec inscription, connexion,
+                            réinitialisation de mot de passe par email et double facteur.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
+                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-        
         </section>
 
+        
         <section id="skills">
-            <h3>Mes competences</h3>
-            <div class="skills">
-                <div class="btn-skill">javaScript</div>
-                <div class="btn-skill">css</div>
-                <div class="btn-skill">python</div>
-                <div class="btn-skill">html</div>
-                <div class="btn-skill">php</div>
-                <div class="btn-skill">django</div>
-                <div class="btn-skill">Postgrey</div>
-                <div class="btn-skill">C</div>
+            <h2>Mes compétences</h2>
+
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Langages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fab fa-php"></i> PHP</div>
+                        <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+                        <div class="skill-item"><i class="fas fa-code"></i> C</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frameworks & Outils</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-python"></i> Django</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> PostgreSQL</div>
+                        <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
+                        <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Outils & Méthodes</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+                        <div class="skill-item"><i class="fas fa-code-branch"></i> REST API</div>
+                        <div class="skill-item"><i class="fas fa-terminal"></i> Linux</div>
+                        <div class="skill-item"><i class="fas fa-cloud"></i> Hébergement</div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="contact">
-            <h3>Me contacter</h3>
-            <form action="" class="form">
-                <label for="nom">Nom:</label>
-                <input type="text" placeholder="votre nom">
-                <label for="Email">Email:</label>
-                <input type="email" placeholder="votre addresse mail">
-                <div class="btn-form">
-                    <button type="submit">envoyer</button>
-                    <button type="reset">effacer</button>
+        <section id="contact">
+            <h2>Me contacter</h2>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Parlons de votre projet</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Messassi - Cameroun</p>
+                    <p><i class="fas fa-envelope"></i> fandom.junior@email.com</p>
+                    <p><i class="fas fa-phone"></i> +237 655318272</p>
+
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
-            </form>
 
+                <form id="contact-form" class="form">
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message..."
+                            required></textarea>
+                    </div>
+
+                    <div class="btn-form">
+                        <button type="submit" class="submit-btn">Envoyer le message</button>
+                        <button type="reset" class="reset-btn">Effacer</button>
+                    </div>
+                </form>
+            </div>
         </section>
-        
-</div>
-    <footer>
-        tout droit reserver 2026
-    </footer>
-    <script>
-        function show(){
-            form = document.querySelector('#form-add');
-            form.style.display='block';
-            
-        }
+    </div>
 
-   
-    </script>
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Fandom CHEFANG Junior. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
