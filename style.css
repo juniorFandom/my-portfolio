@@ -1,4 +1,4 @@
-/* ===== VARIABLES CSS ===== */
+
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -12,7 +12,6 @@
     --transition: all 0.3s ease;
 }
 
-/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +30,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===== LAYOUT ===== */
+
 .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -275,7 +274,7 @@ nav ol li a:hover::after {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    height: fit-content;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -441,6 +440,7 @@ nav ol li a:hover::after {
     background-color: rgb(32, 28, 28);
     color: white;
     transform: translateY(-5px);
+    /* transform:scale(1.1); */
 }
 
 .form {
@@ -562,10 +562,12 @@ footer {
         flex-direction: column;
         padding: 20px;
         box-shadow: var(--shadow);
+        transition: var(--transition);
     }
 
     nav ol.show {
         display: flex;
+        transform: translateY(-1px);
     }
 
     .menu-btn {

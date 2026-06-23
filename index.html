@@ -1,268 +1,431 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Fandom CHEFANG Junior - Développeur Backend Python/Django"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>
+      Fandom CHEFANG Junior | Portfolio Développeur Backend Python/Django
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Fandom CHEFANG Junior - Développeur Backend Python/Django">
-    <link rel="stylesheet" href="style.css">
-    <title>Fandom CHEFANG Junior | Portfolio Développeur Backend Python/Django</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-
-<body>
+  <body>
     <header>
-        <h3>FANDOM junior</h3>
-        <nav>
-            <ol id="nav-menu">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#projects">Mes projets</a></li>
-                <li><a href="#skills">Mes compétences</a></li>
-                <li><a href="#contact">Me contacter</a></li>
-            </ol>
-            <button class="btn menu-btn" onclick="toggleMenu()">☰ Menu</button>
-        </nav>
+      <h3>FANDOM junior</h3>
+      <nav>
+        <ol id="nav-menu">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#projects">Mes projets</a></li>
+          <li><a href="#skills">Mes compétences</a></li>
+          <li><a href="#contact">Me contacter</a></li>
+        </ol>
+        <button class="btn menu-btn" onclick="toggleMenu()">☰ Menu</button>
+      </nav>
     </header>
 
     <div class="main">
-        <!-- Section Accueil -->
-        <section id="accueil">
-            <div class="accueil">
-                <img src="image/tof.png" alt="Photo de Fandom CHEFANG Junior, développeur backend Python"
-                    class="profile-img">
-                <div class="description">
-                    <h1>Bonjour, je suis <span class="highlight">Fandom CHEFANG Junior</span></h1>
-                    <p class="subtitle">Développeur Backend Python (Django) passionné, basé à Yaoundé.</p>
-                    <p class="description-text">Je transforme vos idées en applications web robustes, sécurisées et
-                        évolutives. Avec une solide formation en développement et une passion pour la résolution de
-                        problèmes complexes, je donne vie à vos projets backend.</p>
-                    <div class="cta-container">
-                        <a href="#contact" class="cta-button">Travaillons ensemble →</a>
-                        <a href="#projects" class="cta-button secondary">Voir mes projets</a>
-                    </div>
-                </div>
+      <!-- Section Accueil -->
+      <section id="accueil">
+        <div class="accueil">
+          <img
+            src="image/tof.png"
+            alt="Photo de Fandom CHEFANG Junior, développeur backend Python"
+            class="profile-img"
+          />
+          <div class="description">
+            <h1>
+              Bonjour, je suis
+              <span class="highlight">Fandom CHEFANG Junior</span>
+            </h1>
+            <p class="subtitle">
+              Ingénieur Solutions & Développeur Sécurité | Python/Django | SOC |
+              DevOps
+            </p>
+            <p class="description-text">
+              Passionné par l'innovation technologique, je développe des
+              applications web sur mesure avec Python/Django et j'implémente des
+              solutions de cybersécurité avancées. Ma double compétence en
+              développement backend et en infrastructure de sécurité (Wazuh,
+              Ansible, Keycloak, Liferay) me permet d'offrir des systèmes à la
+              fois fonctionnels, évolutifs et protégés contre les menaces
+              modernes. De la conception d'API RESTful à la mise en place de
+              centres opérationnels de sécurité, je vous accompagne dans la
+              réalisation de vos projets les plus ambitieux.
+            </p>
+            <div class="cta-container">
+              <a href="#contact" class="cta-button">Travaillons ensemble →</a>
+              <a href="#projects" class="cta-button secondary"
+                >Voir mes projets</a
+              >
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Section Projets -->
-        <section id="projects">
-            <h2>Mes projets</h2>
+      <!-- Section Projets -->
+      <section id="projects">
+        <h2>Mes projets</h2>
 
-            <!-- Filtres de projets -->
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">Tous</button>
-                <button class="filter-btn" data-filter="python">Python/Django</button>
-                <button class="filter-btn" data-filter="php">PHP</button>
-                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        <!-- Filtres de projets -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="python">Python/Django</button>
+          <button class="filter-btn" data-filter="php">PHP</button>
+          <button class="filter-btn" data-filter="javascript">
+            JavaScript
+          </button>
+          <button class="filter-btn" data-filter="security">Sécurité</button>
+        </div>
+
+        <div class="grid" id="projects-grid">
+          <!-- Projet 1 - SOC (Centre Opérationnel de Sécurité) -->
+          <article class="project-card" data-category="security">
+            <img
+              class="project-image"
+              src="image/soc.png"
+              alt="Architecture du SOC - Centre Opérationnel de Sécurité"
+            />
+            <div class="project-content">
+              <h3>SOC - Centre Opérationnel de Sécurité</h3>
+              <div class="project-tags">
+                <span class="tag">Wazuh</span>
+                <span class="tag">Ansible</span>
+                <span class="tag">Keycloak</span>
+                <span class="tag">Liferay</span>
+                <span class="tag">SIEM</span>
+                <span class="tag">Elastic Stack</span>
+              </div>
+              <p class="project-description">
+                Plateforme complète de sécurité informatique intégrant Wazuh
+                pour la détection d'intrusions et l'analyse des logs, Ansible
+                pour l'automatisation du déploiement et la configuration des
+                agents, Keycloak pour la gestion centralisée des identités et
+                des accès (IAM), et Liferay pour le portail de gestion des
+                incidents et le tableau de bord de supervision. Architecture
+                scalable avec orchestration Docker.
+              </p>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fas fa-eye"></i> Démo</a
+                >
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 3 - SecureVault (Gestionnaire de mots de passe) -->
+          <article class="project-card" data-category="python">
+            <img
+              class="project-image"
+              src="image/cp2.png"
+              alt="Capture d'écran de SecureVault - Gestionnaire de mots de passe sécurisé"
+            />
+            <div class="project-content">
+              <h3>SecureVault - Coffre-fort numérique</h3>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Django</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+                <span class="tag">OAuth 2.0</span>
+                <span class="tag">AES-256-GCM</span>
+              </div>
+              <p class="project-description">
+                Application monolithique de gestion de coffre-fort numérique
+                avec architecture "Zero-Knowledge". Authentification OAuth
+                2.0/OpenID Connect, chiffrement AES-256-GCM avec
+                PBKDF2-HMAC-SHA256, protection XSS/CSRF intégrée.
+              </p>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fas fa-eye"></i> Démo</a
+                >
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 4 - API E-commerce RESTful -->
+          <article class="project-card" data-category="python">
+            <img
+              class="project-image"
+              src="image/cp2.png"
+              alt="Capture d'écran de la documentation de l'API e-commerce"
+            />
+            <div class="project-content">
+              <h3>API E-commerce RESTful</h3>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Django REST</span>
+                <span class="tag">JWT</span>
+                <span class="tag">Swagger</span>
+              </div>
+              <p class="project-description">
+                API REST complète pour une plateforme e-commerce avec
+                authentification JWT, panier d'achat, gestion de commandes et
+                documentation interactive avec Swagger.
+              </p>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fas fa-eye"></i> Démo</a
+                >
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 5 - Blog CMS -->
+          <article class="project-card" data-category="php">
+            <img
+              class="project-image"
+              src="image/cp4.png"
+              alt="Capture d'écran du système de blog CMS"
+            />
+            <div class="project-content">
+              <h3>Système de Blog CMS</h3>
+              <div class="project-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
+              <p class="project-description">
+                CMS de blog fait maison avec système d'authentification,
+                création d'articles, commentaires modérés et tableau de bord
+                administrateur.
+              </p>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fas fa-eye"></i> Démo</a
+                >
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 6 - Application Météo -->
+          <article class="project-card" data-category="javascript">
+            <img
+              class="project-image"
+              src="image/image.png"
+              alt="Capture d'écran de l'application météo"
+            />
+            <div class="project-content">
+              <h3>Application Météo</h3>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">API</span>
+                <span class="tag">CSS</span>
+              </div>
+              <p class="project-description">
+                Application météo interactive utilisant une API publique.
+                Recherche de villes, affichage des prévisions sur 5 jours et
+                design responsive.
+              </p>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fas fa-eye"></i> Démo</a
+                >
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 7 - Système d'authentification sécurisé -->
+          <article class="project-card" data-category="python">
+            <img
+              class="project-image"
+              src="image/cp2.png"
+              alt="Capture d'écran du système d'authentification"
+            />
+            <div class="project-content">
+              <h3>Système d'authentification sécurisé</h3>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Django</span>
+                <span class="tag">HTMX</span>
+              </div>
+              <p class="project-description">
+                Système complet d'authentification avec inscription, connexion,
+                réinitialisation de mot de passe par email et double facteur.
+              </p>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fas fa-eye"></i> Démo</a
+                >
+                <a href="#" target="_blank" class="project-link"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section Compétences -->
+      <section id="skills">
+        <h2>Mes compétences</h2>
+
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Langages</h3>
+            <div class="skills-grid">
+              <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+              <div class="skill-item"><i class="fab fa-php"></i> PHP</div>
+              <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+              <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+              <div class="skill-item"><i class="fas fa-code"></i> Bash</div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i> PowerShell
+              </div>
+              <div class="skill-item"><i class="fas fa-code"></i> HTML/CSS</div>
+              <div class="skill-item"><i class="fas fa-code"></i> C</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Frameworks & Outils</h3>
+            <div class="skills-grid">
+              <div class="skill-item"><i class="fab fa-python"></i> Django</div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i> PostgreSQL
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i> MySQL
+              </div>
+              <div class="skill-item"><i class="fas fa-code"></i> Flask</div>
+              <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+              <div class="skill-item">
+                <i class="fab fa-ansible"></i> Ansible
+              </div>
+              <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
+              <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Outils & Méthodes</h3>
+            <div class="skills-grid">
+              <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+              <div class="skill-item">
+                <i class="fas fa-code-branch"></i> REST API
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-terminal"></i> Linux
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-cloud"></i> Hébergement
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Contact -->
+      <section id="contact">
+        <h2>Me contacter</h2>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Parlons de votre projet</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Yaoundé, Messassi - Cameroun
+            </p>
+            <p><i class="fas fa-envelope"></i> juniorfandom95@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +237 655318272</p>
+
+            <div class="social-links">
+              <a href="#" target="_blank" class="social-link"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="#" target="_blank" class="social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" target="_blank" class="social-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="form">
+            <div class="form-group">
+              <label for="nom">Nom complet *</label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                placeholder="Votre nom"
+                onkeydown="test()"
+                required
+              />
             </div>
 
-            <div class="grid" id="projects-grid">
-                
-                <article class="project-card" data-category="python">
-                    <img class="project-image" src="image/cp4.png"
-                        alt="Capture d'écran de l'application de gestion de stock pour l'entreprise Franco">
-                    <div class="project-content">
-                        <h3>Gestion de stock - Franco</h3>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Django</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Bootstrap</span>
-                        </div>
-                        <p class="project-description">
-                            Application complète de gestion de stock pour une entreprise de distribution.
-                            Gestion des entrées/sorties, alertes de stock bas, génération de rapports PDF et dashboard
-                            admin.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
-                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </article>
-
-              
-                <article class="project-card" data-category="python">
-                    <img class="project-image" src="image/cp2.png"
-                        alt="Capture d'écran de la documentation de l'API e-commerce">
-                    <div class="project-content">
-                        <h3>API E-commerce RESTful</h3>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Django REST</span>
-                            <span class="tag">JWT</span>
-                            <span class="tag">Swagger</span>
-                        </div>
-                        <p class="project-description">
-                            API REST complète pour une plateforme e-commerce avec authentification JWT,
-                            panier d'achat, gestion de commandes et documentation interactive avec Swagger.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
-                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Projet 3 - Blog CMS -->
-                <article class="project-card" data-category="php">
-                    <img class="project-image" src="image/cp4.png" alt="Capture d'écran du système de blog CMS">
-                    <div class="project-content">
-                        <h3>Système de Blog CMS</h3>
-                        <div class="project-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">HTML/CSS</span>
-                        </div>
-                        <p class="project-description">
-                            CMS de blog fait maison avec système d'authentification,
-                            création d'articles, commentaires modérés et tableau de bord administrateur.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
-                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                
-                <article class="project-card" data-category="javascript">
-                    <img class="project-image" src="image/cp3.png"
-                        alt="Capture d'écran de l'application météo">
-                    <div class="project-content">
-                        <h3>Application Météo</h3>
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">API</span>
-                            <span class="tag">CSS</span>
-                        </div>
-                        <p class="project-description">
-                            Application météo interactive utilisant une API publique.
-                            Recherche de villes, affichage des prévisions sur 5 jours et design responsive.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
-                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </article>
-
-                
-                <article class="project-card" data-category="python">
-                    <img class="project-image" src="image/cp2.png"
-                        alt="Capture d'écran du système d'authentification">
-                    <div class="project-content">
-                        <h3>Système d'authentification sécurisé</h3>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Django</span>
-                            <span class="tag">HTMX</span>
-                        </div>
-                        <p class="project-description">
-                            Système complet d'authentification avec inscription, connexion,
-                            réinitialisation de mot de passe par email et double facteur.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i> Démo</a>
-                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </article>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="votre@email.com"
+                required
+              />
             </div>
-        </section>
 
-        
-        <section id="skills">
-            <h2>Mes compétences</h2>
-
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Langages</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-                        <div class="skill-item"><i class="fab fa-php"></i> PHP</div>
-                        <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
-                        <div class="skill-item"><i class="fas fa-code"></i> C</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Frameworks & Outils</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item"><i class="fab fa-python"></i> Django</div>
-                        <div class="skill-item"><i class="fas fa-database"></i> PostgreSQL</div>
-                        <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
-                        <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Outils & Méthodes</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
-                        <div class="skill-item"><i class="fas fa-code-branch"></i> REST API</div>
-                        <div class="skill-item"><i class="fas fa-terminal"></i> Linux</div>
-                        <div class="skill-item"><i class="fas fa-cloud"></i> Hébergement</div>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="sujet">Sujet</label>
+              <input
+                type="text"
+                id="sujet"
+                name="sujet"
+                placeholder="Sujet de votre message"
+              />
             </div>
-        </section>
 
-        <section id="contact">
-            <h2>Me contacter</h2>
-
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Parlons de votre projet</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Messassi - Cameroun</p>
-                    <p><i class="fas fa-envelope"></i> juniorfandom95@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +237 655318272</p>
-
-                    <div class="social-links">
-                        <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <form id="contact-form" class="form">
-                    <div class="form-group">
-                        <label for="nom">Nom complet *</label>
-                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="sujet">Sujet</label>
-                        <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Votre message..."
-                            required></textarea>
-                    </div>
-
-                    <div class="btn-form">
-                        <button type="submit" class="submit-btn">Envoyer le message</button>
-                        <button type="reset" class="reset-btn">Effacer</button>
-                    </div>
-                </form>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Votre message..."
+                required
+              ></textarea>
             </div>
-        </section>
+
+            <div class="btn-form">
+              <button type="submit" class="submit-btn">
+                Envoyer le message
+              </button>
+              <button type="reset" class="reset-btn">Effacer</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <p>© 2026 Fandom CHEFANG Junior. Tous droits réservés.</p>
-        </div>
+      <div class="footer-content">
+        <p>© 2026 Fandom CHEFANG Junior. Tous droits réservés.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
